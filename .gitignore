@@ -1,0 +1,60 @@
+# ---------------------------------------------------------------
+# PDS / Fabric Compiler 编译产物
+# 这些目录每次 "Generate Bitstream" 都会重新生成, 不进版本库
+# ---------------------------------------------------------------
+prj/compile/
+prj/synthesize/
+prj/place_route/
+prj/device_map/
+prj/log/
+prj/logbackup/
+prj/report_timing/
+prj/generate_bitstream/
+
+# 流程日志与临时文件
+prj/*.log
+prj/*.lock
+prj/*.rpt
+prj/*.rtr
+prj/impl.tcl
+prj/multiseed_summary.csv
+prj/sources_info.log
+prj/.pds.*
+
+# 工程文件的历史备份（本轮已归档到 git 之外）
+prj/*.bak_*
+prj/*.pds.bak*
+
+# 后仿/波形
+*.vcd
+*.wlf
+*.fsdb
+transcript
+vsim.wlf
+
+# ---------------------------------------------------------------
+# ModelSim 仿真库（run_reg_v32.sh 每次重建）
+# ---------------------------------------------------------------
+sim/work_*/
+sim/reg_v32.log
+sim/flist_c.txt
+
+# ---------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+pc/build/
+pc/dist/
+
+# 上位机的运行素材：测试视频 + 打包好的 exe，都不属于"工程源码"
+pc/视频传输/
+pc/*.exe
+*.mp4
+
+# ---------------------------------------------------------------
+# 系统
+# ---------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
